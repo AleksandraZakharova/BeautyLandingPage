@@ -159,15 +159,6 @@ h1{
     top: 0px;
 }
 
-.hero__socials{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-}
-
-.hero__socials img:not(:last-child) {
-    margin-bottom: 20px;
-}
 
 .section__title{
     font-family: 'Montserrat', sans-serif;
@@ -176,4 +167,20 @@ h1{
     font-size: 48px;
     line-height: 59px;
     margin: 0;
+}
+
+.hero__socials {
+    height: fit-content;
+    position: fixed;
+    top: 239px;
+    right: calc((100% - 1110px) / 2);
+}
+
+.hero__socials div{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__socials img:not(:last-child) {
+    margin-bottom: 20px;
 }
