@@ -99,13 +99,20 @@ h1{
 
 .content__subtitle {
     font-family: 'Montserrat', sans-serif;
-    font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
     line-height: 24px;
     color: #333333;
-    margin: 0 0 60px;
+    margin: 0;
+}
+
+.hero__content .content__subtitle {
+    margin-bottom: 60px;
+}
+
+.about__hero .content__subtitle {
+    line-height: 32px;
 }
 
 .content__btn { 
@@ -123,7 +130,7 @@ h1{
     cursor: pointer;
 }
 
-.header__hero {
+.hero {
    display: flex;
 }
 
@@ -166,7 +173,7 @@ h1{
     font-weight: bold;
     font-size: 48px;
     line-height: 59px;
-    margin: 0;
+    margin: 94px 0 32px;
 }
 
 .hero__socials {
@@ -183,4 +190,30 @@ h1{
 
 .hero__socials img:not(:last-child) {
     margin-bottom: 20px;
+}
+
+.content__article {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0;
+}
+
+.content__link {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #278AFF;
+}
+
+.about__hero .content p {
+    margin-bottom: 16px;
+}
+
+.hero_video {
+    margin-left: 95px;
 }
