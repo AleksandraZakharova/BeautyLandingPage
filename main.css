@@ -21,6 +21,7 @@ body,
     font-weight: 500;
     font-size: 18px;
     line-height: 14px;
+    margin: 0;
 }
 
 .info__subtitle {
@@ -29,6 +30,9 @@ body,
     font-weight: normal;
     font-size: 11px;
     line-height: 14px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 165px;
 }
 
 .navigation a {
@@ -67,18 +71,12 @@ a {
     width: fit-content;
 }
 
-.info__title {
-    margin-bottom: 8px;
-    text-align: right;
-}
-
-
 .header__top {
     display: flex;
     /*TODO: не знаю, как по-другому сделать выравнивание элементов в верху хэдера*/
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
-    padding: 30px 165px 6px;
+    padding: 30px 165px 0px;
 }
 
 .header {
@@ -129,7 +127,7 @@ a {
 }
 
 .circle {
-    position: absolute;
+    position: relative;
     width: 472px;
     height: 472px;
     left: 49px;
@@ -152,4 +150,18 @@ a {
 .hero__img img {
     z-index: 10;
     position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.hero__socials{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 1245px;
+    top: 164px;
+}
+
+.hero__socials img:not(:last-child) {
+    margin-bottom: 20px;
 }
