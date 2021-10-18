@@ -10,7 +10,6 @@ body,
     font-weight: bold;
     font-size: 24px;
     line-height: 29px;
-    color: #333333;
     margin: 0;
     padding: 0;
 }
@@ -32,7 +31,6 @@ body,
     line-height: 14px;
     display: flex;
     flex-direction: row-reverse;
-    margin-right: 165px;
 }
 
 .navigation a {
@@ -65,6 +63,10 @@ a {
     
 }
 
+h1{
+    color: #333333;
+}
+
 .top__info {
     display: flex;
     flex-direction: column;
@@ -76,7 +78,7 @@ a {
     /*TODO: не знаю, как по-другому сделать выравнивание элементов в верху хэдера*/
     align-items: center;
     justify-content: space-between;
-    padding: 30px 165px 0px;
+    padding-top: 30px;
 }
 
 .header {
@@ -91,7 +93,6 @@ a {
     font-weight: 600;
     font-size: 48px;
     line-height: 59px;
-    color: #333333;
     margin: 0 0 16px;
     max-width: 486px;
 }
@@ -122,8 +123,13 @@ a {
     cursor: pointer;
 }
 
-.hero {
-    display: flex;
+.header__hero {
+   display: flex;
+}
+
+.container {
+    max-width: 1110px;
+    margin: auto;
 }
 
 .circle {
@@ -138,7 +144,6 @@ a {
 
 .hero__content {
     padding-top: 120px;
-    margin-left: 163px;
     margin-right: 9px;
     margin-bottom: 124px;
 }
@@ -158,10 +163,17 @@ a {
     display: flex;
     flex-direction: column;
     position: fixed;
-    left: 1245px;
-    top: 164px;
 }
 
 .hero__socials img:not(:last-child) {
     margin-bottom: 20px;
+}
+
+.section__title{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    margin: 0;
 }
