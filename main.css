@@ -181,6 +181,7 @@ h1{
     position: fixed;
     top: 239px;
     right: calc((100% - 1110px) / 2);
+    z-index: 10;
 }
 
 .hero__socials div{
@@ -214,6 +215,35 @@ h1{
     margin-bottom: 16px;
 }
 
-.hero_video {
+.video-box {
+    min-width: 445px;
+    height: 297px;
+    border-radius: 8px;
     margin-left: 95px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-box:before {
+   content:'';
+   position: absolute;
+   left: 0;
+   top:0;
+   bottom: 0;
+   right: 0;
+   background-color: #333333;
+   opacity: 20%;
+}
+
+.video-box__action {
+    color: #fff;
+    position: relative;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: 'Montserrat', sans-serif;
 }
