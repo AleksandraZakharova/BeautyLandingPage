@@ -14,7 +14,7 @@ body,
     padding: 0;
 }
 
-.info__title {
+.top__phone {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -23,7 +23,7 @@ body,
     margin: 0;
 }
 
-.info__subtitle {
+.time-table {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
