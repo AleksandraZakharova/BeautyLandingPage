@@ -200,7 +200,7 @@ h1 {
     flex-direction: column;
 }
 
-.hero__socials img:not(:last-child) {
+.hero__socials a:not(:last-child) {
     margin-bottom: 20px;
 }
 
