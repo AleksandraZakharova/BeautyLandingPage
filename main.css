@@ -41,13 +41,21 @@ h1 {
     margin: 0;
 }
 
-.top__phone {
+.contacts {
+    display: flex;
+    flex-direction: column;
+    padding-top: 9px;
+    align-items: flex-end;
+}
+
+.contacts__phone {
     font-weight: 500;
     font-size: 18px;
     line-height: 14px;
+    margin-bottom: 8px;
 }
 
-.time-table {
+.contacts__time-table {
     font-size: 11px;
     line-height: 14px;
     display: flex;
@@ -67,6 +75,10 @@ h1 {
     padding: 0;
 }
 
+.header__top .navigation ul{
+    padding-top: 6px;
+}
+
 .navigation li:not(:last-child) {
     margin-right: 28px;
 }
@@ -83,7 +95,6 @@ h1 {
 
 .header__top {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding-top: 30px;
 }
@@ -118,7 +129,7 @@ h1 {
 }
 
 .content__btn { 
-    font-family: 'Montserrat', sans-serif;
+    font-family: inherit;
     width: 203px;
     height: 48px;
     background-color: #FB9475;
@@ -239,7 +250,7 @@ h1 {
     line-height: 26px;
 }
 
-.benefits {
+.benefits div.container{
     display: flex;
     justify-content: space-around;
 }
