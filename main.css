@@ -187,7 +187,7 @@ h1 {
     margin: 94px 0 32px;
 }
 
-.hero__socials {
+.socials {
     height: fit-content;
     position: fixed;
     top: 239px;
@@ -195,13 +195,18 @@ h1 {
     z-index: 10;
 }
 
-.hero__socials div {
+.hero__socials {
     display: flex;
     flex-direction: column;
 }
 
 .hero__socials img:not(:last-child) {
     margin-bottom: 20px;
+}
+
+.hero__socials div {
+    display: flex;
+    flex-direction: column;
 }
 
 .content__article {
