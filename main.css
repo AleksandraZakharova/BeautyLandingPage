@@ -152,20 +152,22 @@ h1 {
     margin: auto;
 }
 
-.circle {
+.hero__content {
+    padding-top: 120px;
+    margin-right: 9px;
+    margin-bottom: 124px;
+}
+
+.hero__img::before {
+    content: '';
+    background: #FB9475;
     position: relative;
     width: 472px;
     height: 472px;
     left: 49px;
     top: 148px;
-    background: #FB9475;
+    display: inline-block;
     border-radius: 50%;
-}
-
-.hero__content {
-    padding-top: 120px;
-    margin-right: 9px;
-    margin-bottom: 124px;
 }
 
 .hero__img {
@@ -173,7 +175,6 @@ h1 {
 }
 
 .hero__img img {
-    z-index: 10;
     position: absolute;
     left: 0px;
     top: 0px;
