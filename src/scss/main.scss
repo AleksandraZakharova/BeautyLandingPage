@@ -100,7 +100,7 @@ h1 {
 }
 
 .header {
-    background-image: url(./image/header_background.jpg);
+    background-image: url(../image/header_background.jpg);
     position: relative;
     overflow: hidden;
 }
@@ -262,7 +262,7 @@ h1 {
 
 .video-box__action::before {
     content: '';
-    background-image: url(./image/play.png);
+    background-image: url(../image/play.png);
     background-repeat: repeat;
     width: 61px;
     height: 61px;
