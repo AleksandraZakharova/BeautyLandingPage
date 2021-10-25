@@ -102,69 +102,104 @@
         color: #333333;
         margin: 0;
     }
+
+    &__btn { 
+        font-family: inherit;
+        width: 203px;
+        height: 48px;
+        background-color: $header-items-color;
+        border-radius: 24px;
+        border: none;
+        color: #fff;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 14px;
+        cursor: pointer;
+    }
+
+    &__article {
+        font-size: 16px;
+        line-height: 26px;
+        margin: 0;
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 17px;
+        color: $link-color;
+    }
 }
 
 .hero {
     display: flex;
 
     &__content {
-        .content__subtitle {
-            margin-bottom: 60px;
+        padding-top: 120px;
+        margin-right: 9px;
+        margin-bottom: 124px;
+
+        .content {
+            &__subtitle {
+                margin-bottom: 60px;
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+
+        img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        &:before {
+            content: '';
+            background: $header-items-color;
+            position: relative;
+            width: 472px;
+            height: 472px;
+            left: 49px;
+            top: 148px;
+            display: inline-block;
+            border-radius: 50%;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        flex-direction: column;
+
+        a:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
         }
     }
  }
 
+ .about {
+    &__hero {
+        .content {
+            &__subtitle{
+                line-height: 32px;
+            }
 
-.about__hero .content__subtitle {
-    line-height: 32px;
-}
-
-.content__btn { 
-    font-family: inherit;
-    width: 203px;
-    height: 48px;
-    background-color: $header-items-color;
-    border-radius: 24px;
-    border: none;
-    color: #fff;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 14px;
-    cursor: pointer;
-}
+            p {
+                margin-bottom: 16px;
+            }
+        }       
+    }
+ }
 
 .container {
     max-width: 1110px;
     min-width: 1110px;
     margin: auto;
-}
-
-.hero__content {
-    padding-top: 120px;
-    margin-right: 9px;
-    margin-bottom: 124px;
-}
-
-.hero__img::before {
-    content: '';
-    background: $header-items-color;
-    position: relative;
-    width: 472px;
-    height: 472px;
-    left: 49px;
-    top: 148px;
-    display: inline-block;
-    border-radius: 50%;
-}
-
-.hero__img {
-    position: relative;
-}
-
-.hero__img img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
 }
 
 .section__title {
@@ -182,36 +217,6 @@
     z-index: 10;
 }
 
-.hero__socials {
-    display: flex;
-    flex-direction: column;
-}
-
-.hero__socials a:not(:last-child) {
-    margin-bottom: 20px;
-}
-
-.hero__socials div {
-    display: flex;
-    flex-direction: column;
-}
-
-.content__article {
-    font-size: 16px;
-    line-height: 26px;
-    margin: 0;
-}
-
-.content__link {
-    font-size: 14px;
-    line-height: 17px;
-    color: #278AFF;
-}
-
-.about__hero .content p {
-    margin-bottom: 16px;
-}
-
 .video-box {
     min-width: 445px;
     height: 297px;
@@ -222,38 +227,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-.video-box:before {
-   content:'';
-   position: absolute;
-   left: 0;
-   top:0;
-   bottom: 0;
-   right: 0;
-   background-color: #333333;
-   opacity: 20%;
-}
+    &:before {
+        content:'';
+        position: absolute;
+        left: 0;
+        top:0;
+        bottom: 0;
+        right: 0;
+        background-color: #333333;
+        opacity: 20%;
+    }
 
-.video-box__action {
-    color: #fff;
-    position: relative;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
+    &__action {
+        color: #fff;
+        position: relative;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
 
-.video-box__action::before {
-    content: '';
-    background-image: url(../image/play.png);
-    background-repeat: repeat;
-    width: 61px;
-    height: 61px;
-    cursor: pointer;
+        &:before {
+            content: '';
+            background-image: url(../image/play.png);
+            background-repeat: repeat;
+            width: 61px;
+            height: 61px;
+            cursor: pointer;
+        }
+    }
 }
 
 .benefits div.container{
