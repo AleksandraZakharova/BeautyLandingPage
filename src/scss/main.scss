@@ -202,11 +202,17 @@
     margin: auto;
 }
 
-.section__title {
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 59px;
-    margin: 94px 0 32px;
+.section {
+    &__title {
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 59px;
+        margin: 94px 0 32px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 100px;
+    }
 }
 
 .socials {
@@ -261,19 +267,25 @@
     }
 }
 
-.benefits div.container{
-    display: flex;
-    justify-content: space-around;
+.benefits {
+    div.container{
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
-.item__title {
-    font-size: 18px;
-    line-height: 22px;
-    margin: 32px 0 12px;
-}
+.item {
+    &__title {
+        font-size: 18px;
+        line-height: 22px;
+        margin: 32px 0 12px;
+    }
 
-.section:not(:last-child) {
-    margin-bottom: 100px;
+    &__content {
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+    }
 }
 
 .benefit {
@@ -281,33 +293,11 @@
     flex-direction: column;
     align-items: center;
     margin: 0 15px;
-}
 
-.item__content {
-    font-size: 14px;
-    line-height: 22px;
-    text-align: center;
-}
-
-.benefit__img {
-    width: 48px;
-    height: 48px;
-}
-
-.footer__content {
-    display: flex;
-    flex-direction: column;
-    font-size: 12px;
-    line-height: 15px;
-}
-
-.footer__content span {
-    margin-bottom: 8px;
-}
-
-.footer__content a {
-    color: #278AFF;
-    text-decoration: underline;
+    &__img {
+        width: 48px;
+        height: 48px;
+    }
 }
 
 .footer {
@@ -318,10 +308,26 @@
     display: flex;
     height: 78px;
     width: 100%;
-}
 
-.footer div.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} 
+    div.container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    } 
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        line-height: 15px;
+
+        span {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #278AFF;
+            text-decoration: underline;
+        }
+    }
+}
