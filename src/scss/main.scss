@@ -1,3 +1,4 @@
+@import 'vendors';
 @import 'common';
 @import 'media';
 @import 'vars';
@@ -15,7 +16,6 @@
 .footer {
     flex-shrink: 0;
 }
-
 
 .top {
     &__title {
@@ -259,7 +259,7 @@
 
         &:before {
             content: '';
-            background-image: url(../image/play.png);
+            background-image: url(../images/play.png);
             background-repeat: repeat;
             width: 61px;
             height: 61px;
