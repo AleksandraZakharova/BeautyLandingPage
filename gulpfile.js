@@ -7,8 +7,17 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
+const SRC_PATH = 'src';
+const DIST_PATH = 'dist';
+
+const PATHS = {
+    scss: `${SRC_PATH}/scss/**/*.scss`,
+    html: `${SRC_PATH}/**/*.html`,
+    images: `${SRC_PATH}/images/**/*.*`
+}
+
 function buildSass(){
-    return src('src/scss/**/*.scss')
+    return src(PATHS.scss)
     .pipe(sourcemap.init())
     .pipe(sass({includePaths: ['./node_modules']}).on('error', sass.logError))
     .pipe(
@@ -18,34 +27,34 @@ function buildSass(){
         ])
     )
     .pipe(sourcemap.write())
-    .pipe(dest('dist/css'))
-    .pipe(dest('src/css'))
+    .pipe(dest(`${DIST_PATH}/css`))
+    .pipe(dest(`${SRC_PATH}/css`))
     .pipe(browserSync.stream())
 }
 
 function buildHtml() {
-    return src('src/**/*.html').pipe(dest('dist')).pipe(browserSync.stream());
+    return src(PATHS.html).pipe(dest(DIST_PATH)).pipe(browserSync.stream());
 }
 
 function copy() {
-    return src(['src/images/**/*.*', 'src/fonts/**/*.*'], { base: 'src'}).pipe(dest('dist'));
+    return src([PATHS.images, `${SRC_PATH}/fonts/**/*.*`], { base: SRC_PATH}).pipe(dest(DIST_PATH));
 }
 
 function cleanDist() {
-    return del('dist');
+    return del(DIST_PATH);
 }
 
 function serve() {
-    watch('src/scss/**/*.scss', buildSass);
-    watch('src/**/*.html', buildHtml);
+    watch(PATHS.scss, buildSass);
+    watch(PATHS.html, buildHtml);
 }
 
 function createDevServer() {
     browserSync.init({
-        server: 'src',
+        server: SRC_PATH,
         notify: false
     })
 }
 
 exports.build = series(cleanDist, buildSass, buildHtml, copy);
-exports.default = parallel(createDevServer, serve);
+exports.default = series(buildSass, parallel(createDevServer, serve));
