@@ -332,37 +332,39 @@
         }
     }
 
-    .cards-container {
+    .cards {
         margin: 0 -15px;
         display: flex;
         flex-wrap: wrap;
-    }
 
-    .item {
-        width: 350px;
-        padding: 0 15px;
-        box-sizing: content-box;
-        margin-bottom: 48px;
-
-        &__title {
-            margin: 20px 0 8px;
-        } 
-
-        &__content {
-            text-align: left;
-            font-size: 12px;
-            line-height: 20px;
-            margin-bottom: 26px;
+        .item {
+            &__title {
+                margin: 20px 0 8px;
+            } 
+    
+            &__content {
+                text-align: left;
+                font-size: 12px;
+                line-height: 20px;
+                margin-bottom: 26px;
+            }
+    
+            &__button {
+                width: 112px;
+                height: 34px;
+            }
         }
-
-        &__button {
-            width: 112px;
-            height: 34px;
-        }
-    }
-
-    img {
-        width: 350px;
-        height: 180px;
+        
+        &__item {
+            width: 350px;
+            padding: 0 15px;
+            box-sizing: content-box;
+            margin-bottom: 48px;  
+           
+            img {
+                width: 350px;
+                height: 180px;
+            }
+        }       
     }
 }
