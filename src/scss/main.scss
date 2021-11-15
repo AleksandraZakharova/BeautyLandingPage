@@ -368,3 +368,18 @@
         }       
     }
 }
+
+.services-price {
+    .section {
+        &__title {
+            font-size: 48px;
+            line-height: 59px;
+            font-weight: 700;
+        }
+    }
+}
+
+.first-li {
+    border-bottom: 2px solid $active-color;
+    padding-bottom: 6px;
+}
