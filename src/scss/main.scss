@@ -12,7 +12,6 @@
     }
 }
 
-
 .header,
 .footer {
     flex-shrink: 0;
@@ -325,9 +324,25 @@
     }
 }
 
-.popular-services {
+.popular-services {  
+    .section {
+        &__title {
+            font-size: 36px;
+            line-height: 44px;
+        }
+    }
+
+    .cards-container {
+        margin: 0 -15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     .item {
         width: 350px;
+        padding: 0 15px;
+        box-sizing: content-box;
+        margin-bottom: 48px;
 
         &__title {
             margin: 20px 0 8px;
@@ -338,6 +353,11 @@
             font-size: 12px;
             line-height: 20px;
             margin-bottom: 26px;
+        }
+
+        &__button {
+            width: 112px;
+            height: 34px;
         }
     }
 
