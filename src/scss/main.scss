@@ -498,14 +498,26 @@
 
 .works {
     display: flex;
+    align-items: center;
 
     &__img {
         width: 338px;
         height: 338px;
         border-radius: 8px;
+        cursor: pointer;
+        background-size:cover;
 
         &:not(:last-child) {
             margin-right: 29px;
         }
+
+        &:hover {
+            filter: brightness(50%);
+            transition: .5s;
+            width: 371px;
+            height: 371px;
+        }
+
+
     }
 }
