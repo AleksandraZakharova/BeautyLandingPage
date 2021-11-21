@@ -370,11 +370,47 @@
 }
 
 .services-price {
+    .navigation {
+        margin-bottom: 51px;
+    }
     .section {
         &__title {
             font-size: 48px;
             line-height: 59px;
             font-weight: 700;
+        }
+    }
+
+    .prices {
+        max-height: 304px;
+        padding: 0;
+        columns: 2;
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            max-width: 444px;
+            margin-bottom: 36px;
+        }
+
+        h2 {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            margin: 0 0 8px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 17px;
+            margin: 0;
+        }
+
+        span {
+            color: $active-color;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 25px;
         }
     }
 }
