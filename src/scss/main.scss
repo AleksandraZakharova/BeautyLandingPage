@@ -490,6 +490,38 @@
 .works {
     display: flex;
     align-items: center;
+    
+    .img {
+        z-index: 1;
+        &__zoom {
+            z-index: 2;
+            visibility: hidden;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            position: relative;
+            flex-direction: column;
+
+            &:hover {
+                visibility: visible;
+            }
+
+            &:before {
+                content: '';
+                background-image: url(../images/zoom-icon.png);
+                background-repeat: no-repeat;
+                width: 46px;
+                height: 48px;
+                cursor: pointer;
+                margin-bottom: 8px;
+            }
+        }
+    }
 
     &__img {
         width: 338px;
@@ -508,7 +540,5 @@
             width: 371px;
             height: 371px;
         }
-
-
     }
 }
