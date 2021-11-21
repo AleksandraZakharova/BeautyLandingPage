@@ -226,17 +226,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    &:before {
-        content:'';
-        position: absolute;
-        left: 0;
-        top:0;
-        bottom: 0;
-        right: 0;
-        background-color: #333333;
-        opacity: 20%;
-    }
+    filter: brightness(80%);
 
     &__action {
         color: #fff;
@@ -252,7 +242,7 @@
         &:before {
             content: '';
             background-image: url(../images/play.png);
-            background-repeat: repeat;
+            background-repeat: no-repeat;
             width: 61px;
             height: 61px;
             cursor: pointer;
@@ -438,13 +428,41 @@
 
         .card {
             padding: 24px 0 80px;
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
     
-            img {
+            &__img-wrap {
+                position: relative;
                 width: 255px;
                 height: 300px;
                 border-radius: 8px;
+                cursor: pointer;
+
+                &:hover:after {
+                    visibility: visible;        
+                    transition: .5s;
+                }
+
+                &:hover {
+                    filter: brightness(50%);
+                    transition: .5s;
+                }
+
+                &:after {           
+                   position: relative;
+                   color: #fff;
+                   visibility: hidden;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   height: 100%;
+                   background-color: transparent;
+                   content: 'Записаться к мастеру'
+                }
             }
-    
+
             &__header {
                 font-weight: 600;
                 font-size: 18px;
