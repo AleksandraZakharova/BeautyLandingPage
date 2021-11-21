@@ -485,3 +485,18 @@
         }
     }
 }
+
+
+.works {
+    display: flex;
+
+    &__img {
+        width: 338px;
+        height: 338px;
+        border-radius: 8px;
+
+        &:not(:last-child) {
+            margin-right: 29px;
+        }
+    }
+}
