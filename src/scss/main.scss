@@ -432,4 +432,48 @@
 
 .masters {
     background-color: #F8F6F7;
+
+    h1 {
+        padding-top: 80px;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        line-height: 19.5px;
+    }
+
+    &__cards {
+        display: flex; 
+
+        .card {
+            padding: 24px 0 80px;
+    
+            img {
+                width: 255px;
+                height: 300px;
+                border-radius: 8px;
+            }
+    
+            &__header {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 22px;
+                margin: 20px 0 8px;
+            }
+    
+            &__position {
+                font-size: 14px;
+                line-height: 17px;
+                margin: 0 0 20px;
+            }
+    
+            &__experience {
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 15px;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+    }
 }
