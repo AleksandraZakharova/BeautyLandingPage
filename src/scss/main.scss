@@ -57,6 +57,7 @@
     background-image: url(../images/header_background.jpg);
     position: relative;
     overflow: hidden;
+    margin-bottom: 94px;
 
     &__top {
         display: flex;
@@ -208,7 +209,7 @@
         font-weight: bold;
         font-size: 48px;
         line-height: 59px;
-        margin: 94px 0 32px;
+        margin: 0 0 32px;
     }
 
     &:not(:last-child) {
@@ -366,10 +367,9 @@
         
         &__item {
             width: 350px;
-            padding: 0 15px;
             box-sizing: content-box;
-            margin-bottom: 48px;  
-           
+            padding: 0 15px 48px;
+
             img {
                 width: 350px;
                 height: 180px;
@@ -428,4 +428,8 @@
 .first-li {
     border-bottom: 2px solid $active-color;
     padding-bottom: 6px;
+}
+
+.masters {
+    background-color: #F8F6F7;
 }
