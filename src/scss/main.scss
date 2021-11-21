@@ -500,7 +500,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     .img {
         &__zoom:hover {
             visibility: visible;
@@ -570,8 +570,43 @@
             height: 60px;
             display: flex;
             align-items: center;
-            margin-right: 30px;
+            
+            &:not(:last-child){
+                margin-right: 30px;
+            }
+
+            &__wella {
+                width: 92px;
+                height: 65px; 
+                margin: 0 33px;
+            }
+
+            &__schwarzkopf {
+                width: 120px;
+                height: 65px;
+                margin: 0 20px;
+            }
+
+            &__tigi {
+                width: 108px;
+                height: 40px;
+                margin: 0 26px;
+            }
+
+            &__londa {
+                width: 113px;
+                height: 60px;
+                margin: 0 23px;
+            }
+
+            &__nioxin {
+                width: 135px;
+                height: 36px;
+                margin: 0 12.5px;
+            }
         }
+
+
 
         img {
             opacity: 0.3;
