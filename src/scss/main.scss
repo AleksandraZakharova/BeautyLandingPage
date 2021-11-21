@@ -492,10 +492,12 @@
     align-items: center;
     
     .img {
-        z-index: 1;
+        &__zoom:hover {
+            visibility: visible;
+        }
+
         &__zoom {
-            z-index: 2;
-            visibility: hidden;
+            visibility: visible; //TODO: Не могу сделать, чтобы при наведении менять hidden на visible, пока просто оставила visible
             color: #fff;
             display: flex;
             justify-content: center;
@@ -506,10 +508,6 @@
             line-height: 17px;
             position: relative;
             flex-direction: column;
-
-            &:hover {
-                visibility: visible;
-            }
 
             &:before {
                 content: '';
@@ -539,6 +537,35 @@
             transition: .5s;
             width: 371px;
             height: 371px;
+        }
+    }
+}
+
+.brands {
+    &__title {
+        font-size: 16px;
+        line-height: 19.5px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .brands-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .brand {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+        }
+
+        img {
+            opacity: 0.3;
+            background-size:cover;
         }
     }
 }
