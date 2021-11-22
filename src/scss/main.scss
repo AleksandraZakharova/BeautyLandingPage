@@ -420,7 +420,7 @@
 }
 
 .masters {
-    background-color: #F8F6F7;
+    background-color: $light-grey-color;
 
     h1 {
         padding-top: 80px;
@@ -616,6 +616,8 @@
 }
 
 .contacts-footer {
+    background-color: $light-grey-color;
+
     .container {
         display: flex;
     }
@@ -624,6 +626,8 @@
         width: 362px;
         align-items: baseline;
         padding-top: 0px;
+        margin-right: 207px;
+        margin-top: 78px;
 
         &__address {
             font-size: 16px;
@@ -660,6 +664,66 @@
     }
 
     .record-form {
+        background-color: $form-background;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+        padding-left: 35px;
         width: 445px;
+        height: 406px;
+        margin-top: 40px;
+
+        input {
+            margin-bottom: 20px;
+        }
+    }
+
+    .form {
+        &__title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 14px;
+            margin-bottom: 15px;
+        }
+
+        &__info {
+            font-size: 14px;
+            line-height: 20px;
+            width: 375px;
+            margin-bottom: 35px;
+        }
+
+        &__agreement {
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 15px;
+
+            a {
+                text-decoration: underline;
+            }
+        }
+
+        input {
+            border: 1px solid $input-border-color;
+            box-sizing: border-box;
+            border-radius: 4px;
+            width: 375px;
+            height: 44px;
+
+            &::placeholder {
+                font-size: 14px;
+                line-height: 14px;
+                color:$placeholder-color;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 15px;
+              }
+        }
+
+        button {
+            width: 375px;
+            height: 48px;
+        }
     }
 }
