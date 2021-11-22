@@ -1,0 +1,27 @@
+
+@import 'vars';
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $font;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+    cursor: pointer; 
+}
+
+h1 {
+    color: #333333;
+}
+
+.active {
+    color: $active-color;
+}
