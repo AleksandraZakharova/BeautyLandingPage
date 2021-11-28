@@ -98,9 +98,6 @@
     
             &__img {
                 margin-right: 0 !important;
-            }
-
-            &__img:not(:last-child) {
                 margin-bottom: 25px;
             }
         }
@@ -136,6 +133,11 @@
     .brands {
         .brands-row {
             flex-direction: column;
+
+            .brand {
+                margin-right: 0 !important;
+                margin-bottom: 70px;
+            }
         }
     }
 
