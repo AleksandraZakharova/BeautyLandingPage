@@ -145,6 +145,12 @@
         .container {
             flex-direction: column;
 
+            .contacts {
+                margin-right: 0;
+                display: flex;
+                align-items: center;
+            }
+
             .record-form {
                 width: 90%;
             }
