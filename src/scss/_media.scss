@@ -1,12 +1,68 @@
 /* Custom, iPhone Retina */ 
 @media only screen and (max-width: 480px) { 
-    .hero {
-        &__img {
-            display: none;
-        }
-    }
-
     header {
+        .top {
+            display: flex;
+            flex-direction: column;
+
+            &__title {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                padding-left: 16px;
+                width: 72%;
+
+                .hamburger {
+                    display: flex;
+                    margin-right: 30px;
+
+                    img {
+                        width: 45px;
+                        height: 45px;
+                    }
+                }
+            }
+
+            .contacts {
+                align-items: center;
+                margin-top: 20px;
+            }
+        }
+
+        .hero {
+            &__img {
+                display: none;
+            }
+
+            &__socials {
+                right: auto;
+                top: 605px;
+                z-index: 10;
+                flex-direction: row;
+                width: 100%;
+                justify-content: center;
+
+                a {
+                    padding: 0 10px;
+                }
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 10px;
+
+                h1 {
+                    text-align: center;
+                }
+
+                &__subtitle {
+                    text-align: center;
+                }
+            }
+        }
+
         .navigation {
             display: none;
         }
@@ -15,6 +71,14 @@
             max-width: inherit;
             min-width: inherit;
         }
+    }
+
+    .section {
+        &__title {
+            text-align: center;
+        }
+
+        padding: 0 25px;
     }
 
     section {
@@ -57,6 +121,29 @@
     .contacts-footer {
         .container {
             flex-direction: column;
+
+            .record-form {
+                width: 90%;
+            }
+        }
+    }
+
+    .about {
+        .video-box {
+            margin-left: 0;
+            min-width: 100%;
+        }
+    }
+
+    .benefits {
+        .container {
+            flex-direction: column;
+        }
+    }
+
+    .services-price {
+        .navigation {
+            display: none;
         }
     }
 }
