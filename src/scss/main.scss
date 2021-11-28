@@ -19,16 +19,22 @@
 
 .top {
     &__title {
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 29px;
-        margin: 0;
+        h1 {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+            margin: 0;
+        }
     }
 
     &__info {
         display: flex;
         flex-direction: column;
         width: fit-content;
+    }
+
+    .hamburger {
+        display: none;
     }
 }
 
@@ -668,8 +674,7 @@
         border-radius: 8px;
         display: flex;
         flex-direction: column;
-        padding-top: 40px;
-        padding-left: 35px;
+        padding: 40px 35px 0;
         width: 445px;
         height: 406px;
         margin: 40px 0;
@@ -690,7 +695,6 @@
         &__info {
             font-size: 14px;
             line-height: 20px;
-            width: 375px;
             margin-bottom: 35px;
         }
 
@@ -708,7 +712,6 @@
             border: 1px solid $input-border-color;
             box-sizing: border-box;
             border-radius: 4px;
-            width: 375px;
             height: 44px;
 
             &::placeholder {
@@ -722,7 +725,6 @@
         }
 
         button {
-            width: 375px;
             height: 48px;
         }
     }
