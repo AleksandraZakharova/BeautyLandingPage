@@ -665,9 +665,9 @@
         border-radius: 8px;
         display: flex;
         flex-direction: column;
-        padding: 40px 35px 0;
+        padding: 40px 35px;
         width: 445px;
-        height: 406px;
+        min-height: 406px;
         margin: 40px 0;
 
         input {
@@ -693,6 +693,7 @@
             font-weight: 300;
             font-size: 12px;
             line-height: 15px;
+            margin: 0;
 
             a {
                 text-decoration: underline;
@@ -703,7 +704,7 @@
             border: 1px solid $input-border-color;
             box-sizing: border-box;
             border-radius: 4px;
-            height: 44px;
+            min-height: 44px;
 
             &::placeholder {
                 font-size: 14px;
@@ -716,7 +717,8 @@
         }
 
         button {
-            height: 48px;
+            min-height: 48px;
+            margin-bottom: 16px;
         }
     }
 }
