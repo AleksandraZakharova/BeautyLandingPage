@@ -97,6 +97,19 @@
     .masters {
         &__cards {
             flex-direction: column;
+
+            .card {
+                margin-right: 0 !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 24px 0 24px !important;
+            }
+        }
+
+        &__subtitle {
+            text-align: center;
         }
     }
 
