@@ -179,4 +179,10 @@
             display: none;
         }
     }
+
+    .footer {
+        &__content {
+            padding-left: 20px;
+        }
+    }
 }
