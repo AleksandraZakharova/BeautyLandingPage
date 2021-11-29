@@ -19,16 +19,22 @@
 
 .top {
     &__title {
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 29px;
-        margin: 0;
+        h1 {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+            margin: 0;
+        }
     }
 
     &__info {
         display: flex;
         flex-direction: column;
         width: fit-content;
+    }
+
+    .hamburger {
+        display: none;
     }
 }
 
@@ -57,6 +63,7 @@
     background-image: url(../images/header_background.jpg);
     position: relative;
     overflow: hidden;
+    margin-bottom: 94px;
 
     &__top {
         display: flex;
@@ -105,17 +112,8 @@
     }
 
     &__btn { 
-        font-family: inherit;
         width: 203px;
-        height: 48px;
-        background-color: $header-items-color;
-        border-radius: 24px;
-        border: none;
-        color: #fff;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 14px;
-        cursor: pointer;
+        height: 48px;      
     }
 
     &__article {
@@ -208,7 +206,7 @@
         font-weight: bold;
         font-size: 48px;
         line-height: 59px;
-        margin: 94px 0 32px;
+        margin: 0 0 32px;
     }
 
     &:not(:last-child) {
@@ -234,17 +232,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    &:before {
-        content:'';
-        position: absolute;
-        left: 0;
-        top:0;
-        bottom: 0;
-        right: 0;
-        background-color: #333333;
-        opacity: 20%;
-    }
+    filter: brightness(80%);
 
     &__action {
         color: #fff;
@@ -260,7 +248,7 @@
         &:before {
             content: '';
             background-image: url(../images/play.png);
-            background-repeat: repeat;
+            background-repeat: no-repeat;
             width: 61px;
             height: 61px;
             cursor: pointer;
@@ -329,6 +317,408 @@
         a {
             color: #278AFF;
             text-decoration: underline;
+        }
+    }
+}
+
+.popular-services {  
+    .section {
+        &__title {
+            font-size: 36px;
+            line-height: 44px;
+        }
+    }
+
+    .cards {
+        margin: 0 -15px;
+        display: flex;
+        flex-wrap: wrap;
+
+        .item {
+            &__title {
+                margin: 20px 0 8px;
+            } 
+    
+            &__content {
+                text-align: left;
+                font-size: 12px;
+                line-height: 20px;
+                margin-bottom: 26px;
+            }
+    
+            &__button {
+                width: 112px;
+                height: 34px;
+            }
+        }
+        
+        &__item {
+            width: 350px;
+            box-sizing: content-box;
+            padding: 0 15px 48px;
+
+            img {
+                width: 350px;
+                height: 180px;
+            }
+        }       
+    }
+}
+
+.services-price {
+    .navigation {
+        margin-bottom: 51px;
+    }
+    .section {
+        &__title {
+            font-size: 48px;
+            line-height: 59px;
+            font-weight: 700;
+        }
+    }
+
+    .prices {
+        padding: 0;
+        margin: 0;
+        columns: 2;
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            max-width: 444px;
+            margin-bottom: 36px;
+        }
+
+        h2 {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            margin: 0 0 8px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 17px;
+            margin: 0;
+        }
+
+        span {
+            color: $active-color;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 25px;
+        }
+    }
+}
+
+.first-li {
+    border-bottom: 2px solid $active-color;
+    padding-bottom: 6px;
+}
+
+.masters {
+    background-color: $light-grey-color;
+
+    h1 {
+        padding-top: 80px;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        line-height: 19.5px;
+    }
+
+    &__cards {
+        display: flex; 
+
+        .card {
+            padding: 24px 0 80px;
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+    
+            &__img-wrap {
+                position: relative;
+                width: 255px;
+                height: 300px;
+                border-radius: 8px;
+                cursor: pointer;
+
+                &:hover:after {
+                    visibility: visible;        
+                    transition: .5s;
+                }
+
+                &:hover {
+                    filter: brightness(50%);
+                    transition: .5s;
+                }
+
+                &:after {           
+                   position: relative;
+                   color: #fff;
+                   visibility: hidden;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   height: 100%;
+                   background-color: transparent;
+                   content: 'Записаться к мастеру'
+                }
+            }
+
+            &__header {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 22px;
+                margin: 20px 0 8px;
+            }
+    
+            &__position {
+                font-size: 14px;
+                line-height: 17px;
+                margin: 0 0 20px;
+            }
+    
+            &__experience {
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 15px;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+.works {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .img {
+        &__zoom:hover {
+            visibility: visible;
+        }
+
+        &__zoom {
+            visibility: visible; //TODO: Не могу сделать, чтобы при наведении менять hidden на visible, пока просто оставила visible
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            position: relative;
+            flex-direction: column;
+
+            &:before {
+                content: '';
+                background-image: url(../images/zoom-icon.png);
+                background-repeat: no-repeat;
+                width: 46px;
+                height: 48px;
+                cursor: pointer;
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__img {
+        width: 338px;
+        height: 338px;
+        border-radius: 8px;
+        cursor: pointer;
+        background-size:cover;
+
+        &:not(:last-child) {
+            margin-right: 29px;
+        }
+
+        &:hover {
+            filter: brightness(50%);
+            transition: .5s;
+            width: 371px;
+            height: 371px;
+        }
+    }
+}
+
+.brands {
+    &__title {
+        font-size: 16px;
+        line-height: 19.5px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .brands-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .brand {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            
+            &:not(:last-child){
+                margin-right: 30px;
+            }
+
+            &__wella {
+                width: 92px;
+                height: 65px; 
+                margin: 0 33px;
+            }
+
+            &__schwarzkopf {
+                width: 120px;
+                height: 65px;
+                margin: 0 20px;
+            }
+
+            &__tigi {
+                width: 108px;
+                height: 40px;
+                margin: 0 26px;
+            }
+
+            &__londa {
+                width: 113px;
+                height: 60px;
+                margin: 0 23px;
+            }
+
+            &__nioxin {
+                width: 135px;
+                height: 36px;
+                margin: 0 12.5px;
+            }
+        }
+
+
+
+        img {
+            opacity: 0.3;
+            background-size:cover;
+        }
+    }
+}
+
+.contacts-footer {
+    background-color: $light-grey-color;
+
+    .container {
+        display: flex;
+    }
+
+    .contacts {
+        width: 362px;
+        align-items: baseline;
+        padding-top: 0px;
+        margin-right: 207px;
+        margin-top: 78px;
+
+        &__address {
+            font-size: 16px;
+            line-height: 20px;
+            margin: 0 0 20px;
+        }
+
+        &__phone {
+            font-size: 16px;
+            line-height: 14px;
+            margin: 0 0 20px;
+            font-weight: 400;
+        }
+
+        &__mail {
+            font-size: 16px;
+            line-height: 20px;
+            text-decoration: underline;
+            margin: 0 0 32px;
+        }
+
+        &__social-title {
+            font-size: 12px;
+            line-height: 14px;
+            margin: 0 0 12px;
+        }
+
+        &__socials {
+            position: inherit;
+            width: 147px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .record-form {
+        background-color: $form-background;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 35px;
+        width: 445px;
+        min-height: 406px;
+        margin: 40px 0;
+
+        input {
+            margin-bottom: 20px;
+        }
+    }
+
+    .form {
+        &__title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 14px;
+            margin-bottom: 15px;
+        }
+
+        &__info {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 35px;
+        }
+
+        &__agreement {
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 15px;
+            margin: 0;
+
+            a {
+                text-decoration: underline;
+            }
+        }
+
+        input {
+            border: 1px solid $input-border-color;
+            box-sizing: border-box;
+            border-radius: 4px;
+            min-height: 44px;
+
+            &::placeholder {
+                font-size: 14px;
+                line-height: 14px;
+                color:$placeholder-color;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 15px;
+              }
+        }
+
+        button {
+            min-height: 48px;
+            margin-bottom: 16px;
         }
     }
 }

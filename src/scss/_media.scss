@@ -1,0 +1,188 @@
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width: 480px) { 
+    header {
+        .top {
+            display: flex;
+            flex-direction: column;
+
+            &__title {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                padding-left: 16px;
+                width: 72%;
+
+                .hamburger {
+                    display: flex;
+                    margin-right: 30px;
+
+                    img {
+                        width: 45px;
+                        height: 45px;
+                    }
+                }
+            }
+
+            .contacts {
+                align-items: center;
+                margin-top: 20px;
+            }
+        }
+
+        .hero {
+            &__img {
+                display: none;
+            }
+
+            &__socials {
+                right: auto;
+                top: 615px;
+                z-index: 10;
+                flex-direction: row;
+                width: 100%;
+                justify-content: center;
+
+                a {
+                    padding: 0 10px;
+                }
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 10px;
+
+                h1 {
+                    text-align: center;
+                }
+
+                &__subtitle {
+                    text-align: center;
+                }
+
+                &__link {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        .navigation {
+            display: none;
+        }
+
+        .container {
+            max-width: inherit;
+            min-width: inherit;
+        }
+    }
+
+    .section {
+        &__title {
+            text-align: center;
+        }
+
+        padding: 0 25px;
+    }
+
+    section {
+        .about {
+            &__hero {
+                flex-direction: column;
+            }
+        }
+
+        .container {
+            max-width: inherit;
+            min-width: inherit;
+        }
+
+        .works {
+            flex-direction: column;
+    
+            &__img {
+                margin-right: 0 !important;
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    .masters {
+        &__cards {
+            flex-direction: column;
+
+            .card {
+                margin-right: 0 !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 24px 0 24px !important;
+            }
+        }
+
+        &__subtitle {
+            text-align: center;
+        }
+    }
+
+    .services-price {
+        .container {
+            .prices {
+                columns: 1;
+            }
+        }
+    }
+
+    .brands {
+        .brands-row {
+            flex-direction: column;
+
+            .brand {
+                margin-right: 0 !important;
+                margin-bottom: 70px;
+            }
+        }
+    }
+
+    .contacts-footer {
+        .container {
+            flex-direction: column;
+
+            .contacts {
+                margin-right: 0;
+                display: flex;
+                align-items: center;
+            }
+
+            .record-form {
+                width: 100%;
+            }
+        }
+    }
+
+    .about {
+        .video-box {
+            margin-left: 0;
+            min-width: 100%;
+        }
+    }
+
+    .benefits {
+        .container {
+            flex-direction: column;
+        }
+    }
+
+    .services-price {
+        .navigation {
+            display: none;
+        }
+    }
+
+    .footer {
+        &__content {
+            padding-left: 20px;
+        }
+    }
+}

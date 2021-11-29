@@ -37,7 +37,7 @@ function buildHtml() {
 }
 
 function copy() {
-    return src([PATHS.images, `${SRC_PATH}/fonts/**/*.*`], { base: SRC_PATH}).pipe(dest(DIST_PATH));
+    return src([PATHS.images], { base: SRC_PATH}).pipe(dest(DIST_PATH));
 }
 
 function cleanDist() {
