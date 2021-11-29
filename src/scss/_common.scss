@@ -25,3 +25,15 @@ h1 {
 .active {
     color: $active-color;
 }
+
+.btn {
+    font-family: inherit;
+    background-color: $header-items-color;
+    border-radius: 24px;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    cursor: pointer;
+}
