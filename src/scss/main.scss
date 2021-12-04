@@ -725,22 +725,22 @@
 
 /* The Overlay (background) */
 .overlay {
+    height: 100%;
     /* Height & width depends on how you want to reveal the overlay (see JS below) */    
-    height: 0%;
     width: 100%;
     position: fixed; /* Stay in place */
     z-index: 999999; /* Sit on top */
     left: 0;
     top: 0;
     background-color: rgb(51,51,51); /* Black fallback color */
-    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-    overflow-y: hidden;
+    background-color: rgba(255, 255, 255, 0.9); /* Black w/opacity */
     transition: 0.5s;
+    overflow-y: scroll
 }
 
 .overlay-content {
     position: relative;
-    top: 25%;
+    top: 10%;
     width: 100%;
     text-align: center; /* Centered text/links */
     margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
@@ -751,17 +751,16 @@
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #fff !important;
+    color: rgb(15, 14, 14) !important;
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
 		text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
 }
 
-
 /* When you mouse over the navigation links, change their color */
 .overlay a:hover, .overlay a:focus {
-    color: #999 !important;
+    color: rgb(15, 14, 14) !important;
 }
 
 /* Position the close button (top right corner) */
