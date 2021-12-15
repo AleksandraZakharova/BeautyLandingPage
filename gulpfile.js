@@ -13,7 +13,8 @@ const DIST_PATH = 'dist';
 const PATHS = {
     scss: `${SRC_PATH}/scss/**/*.scss`,
     html: `${SRC_PATH}/**/*.html`,
-    images: `${SRC_PATH}/images/**/*.*`
+    images: `${SRC_PATH}/images/**/*.*`,
+    js: `${SRC_PATH}/js/index.js`
 }
 
 function buildSass(){
@@ -32,6 +33,13 @@ function buildSass(){
     .pipe(browserSync.stream())
 }
 
+function buildJs(){
+    return src(PATHS.js)
+        .pipe(dest(`${SRC_PATH}/js`))
+        .pipe(dest(`${DIST_PATH}/js`))
+        .pipe(browserSync.stream());
+}
+
 function buildHtml() {
     return src(PATHS.html).pipe(dest(DIST_PATH)).pipe(browserSync.stream());
 }
@@ -47,6 +55,7 @@ function cleanDist() {
 function serve() {
     watch(PATHS.scss, buildSass);
     watch(PATHS.html, buildHtml);
+    watch(PATHS.js, buildJs);
 }
 
 function createDevServer() {
@@ -56,5 +65,5 @@ function createDevServer() {
     })
 }
 
-exports.build = series(cleanDist, buildSass, buildHtml, copy);
-exports.default = series(buildSass, parallel(createDevServer, serve));
+exports.build = series(cleanDist, buildSass, buildHtml, buildJs, copy);
+exports.default = series([buildSass, buildJs], parallel(createDevServer, serve));
