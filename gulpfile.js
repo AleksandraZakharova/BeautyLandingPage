@@ -29,13 +29,11 @@ function buildSass(){
     )
     .pipe(sourcemap.write())
     .pipe(dest(`${DIST_PATH}/css`))
-    .pipe(dest(`${SRC_PATH}/css`))
     .pipe(browserSync.stream())
 }
 
 function buildJs(){
     return src(PATHS.js)
-        .pipe(dest(`${SRC_PATH}/js`))
         .pipe(dest(`${DIST_PATH}/js`))
         .pipe(browserSync.stream());
 }
@@ -45,7 +43,8 @@ function buildHtml() {
 }
 
 function copy() {
-    return src([PATHS.images, `${SRC_PATH}/fonts/**/*.*`], { base: SRC_PATH}).pipe(dest(DIST_PATH));
+    return src([PATHS.images, `${SRC_PATH}/fonts/**/*.*`], { base: SRC_PATH})
+        .pipe(dest(DIST_PATH));
 }
 
 function cleanDist() {
