@@ -19,13 +19,23 @@ function submitForm() {
 }
 
 function init() {
-    const recordForm = document.querySelector('.record-form');
-    recordForm.addEventListener('submit', event => {
-        event.preventDefault();
-        const {phone} = recordForm.elements;
-        const {name} = recordForm.elements;
-        console.log('phone: ', phone.value);
-        console.log('name: ', name.value);
+
+    document
+        .querySelector('.record-form')
+        .addEventListener('submit', event => {
+            event.preventDefault();
+
+            var formData = Array
+                .from(event.target.elements)
+                .filter(element => element.name)
+                .forEach(element => {
+                    const {value, name, type } = element;
+
+                    console.log(name, value);
+            });
+
+           
+            
     })
 }
 
