@@ -1,42 +1,41 @@
-jQuery(function(){
+$(document).ready(function(){
+
     $('#hamburger-nav a').on('click', function(){
         closeNav();
     })
-})
 
-/* Open */
-function openNav() {
-    document.getElementById("hamburger-nav").style.height = "100%";
-}
-
-/* Close*/
-function closeNav() {
-    document.getElementById("hamburger-nav").style.height = "0%";
-}
-
-function submitForm() {
+    $('.slider').slick();
     
-}
+    /* Open */
+    function openNav() {
+        document.getElementById("hamburger-nav").style.height = "100%";
+    }
 
-function init() {
+    /* Close*/
+    function closeNav() {
+        document.getElementById("hamburger-nav").style.height = "0%";
+    }
 
-    document
-        .querySelector('.record-form')
-        .addEventListener('submit', event => {
-            event.preventDefault();
+    function submitForm() {
+        
+    }
 
-            var formData = Array
-                .from(event.target.elements)
-                .filter(element => element.name)
-                .forEach(element => {
-                    const {value, name, type } = element;
+    function init() {
+        document
+            .querySelector('.record-form')
+            .addEventListener('submit', event => {
+                event.preventDefault();
 
-                    console.log(name, value);
-            });
+                var formData = Array
+                    .from(event.target.elements)
+                    .filter(element => element.name)
+                    .forEach(element => {
+                        const {value, name, type } = element;
 
-           
-            
-    })
-}
+                        console.log(name, value);
+                });         
+        })
+    }
 
-document.addEventListener('DOMContentLoaded', init)
+    document.addEventListener('DOMContentLoaded', init)
+});
