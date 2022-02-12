@@ -492,12 +492,22 @@
     }
 }
 
+.slick-track {
+    div {
+        padding-right: 29px;
+    }
+}
+
 .works {
     display: flex;
     align-items: center;
     justify-content: center;
 
     .img {
+        &:not(:last-child) {
+            margin-right: 29px;
+        }
+
         &__zoom:hover {
             visibility: visible;
         }
@@ -533,10 +543,6 @@
         border-radius: 8px;
         cursor: pointer;
         background-size:cover;
-
-        &:not(:last-child) {
-            margin-right: 29px;
-        }
 
         &:hover {
             filter: brightness(50%);
