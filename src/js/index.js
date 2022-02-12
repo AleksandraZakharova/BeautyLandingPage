@@ -4,7 +4,12 @@ $(document).ready(function(){
         closeNav();
     })
 
-    $('.slider').slick();
+    $('.slider').slick({
+        prevArrow: '.btn-prev',
+        nextArrow: '.btn-next',
+        slidesToShow: 3,
+        infinite: true
+    });
     
     /* Open */
     function openNav() {
