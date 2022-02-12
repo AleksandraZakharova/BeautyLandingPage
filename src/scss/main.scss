@@ -538,8 +538,8 @@
     }
 
     &__img {
-        width: 338px !important;
-        height: 338px !important;
+        width: 338px;
+        height: 338px;
         border-radius: 8px;
         cursor: pointer;
         background-size:cover;
@@ -551,6 +551,10 @@
             height: 371px;
         }
     }
+}
+
+.slick-track {
+    height: 400px;
 }
 
 .brands {
