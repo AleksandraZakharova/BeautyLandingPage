@@ -723,6 +723,38 @@
 }
 
 .our-works {
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .slider-btn{
+        display: flex;
+        width: 96px;
+        justify-content: space-between;
+
+        .btn {
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            border: 0;
+            background-color: transparent;
+            background-position: center;
+            
+            &:hover {
+                border-radius: 50%;
+                background-color: #F8F6F7;
+            }
+        }
+        .btn-prev {
+            background-image: url('../images/left-arrow.png');
+        }
+
+        .btn-next {
+            background-image: url('../images/right-arrow.png');
+        }
+    }
+    
     .slider {
         div:not(:last-child) {
            img {
