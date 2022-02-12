@@ -7,7 +7,7 @@ $(document).ready(function(){
     $('.slider').slick({
         prevArrow: '.btn-prev',
         nextArrow: '.btn-next',
-        slidesToShow: 3,
+        slidesToShow: 4,
         infinite: true,
         adaptiveHeight: true
     });
