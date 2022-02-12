@@ -492,7 +492,6 @@
     }
 }
 
-
 .works {
     display: flex;
     align-items: center;
@@ -529,8 +528,8 @@
     }
 
     &__img {
-        width: 338px;
-        height: 338px;
+        width: 338px !important;
+        height: 338px !important;
         border-radius: 8px;
         cursor: pointer;
         background-size:cover;
@@ -722,6 +721,14 @@
         }
     }
 }
+
+.our-works {
+    .slick-slide {
+        width: 338px;
+        height: 338px;
+    }
+}
+
 
 /* The Overlay (background) */
 .overlay {

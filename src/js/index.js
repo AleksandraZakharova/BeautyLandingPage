@@ -8,7 +8,8 @@ $(document).ready(function(){
         prevArrow: '.btn-prev',
         nextArrow: '.btn-next',
         slidesToShow: 3,
-        infinite: true
+        infinite: true,
+        adaptiveHeight: true
     });
     
     /* Open */
