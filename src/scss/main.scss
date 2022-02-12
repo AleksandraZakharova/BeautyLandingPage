@@ -724,10 +724,12 @@
 
 .our-works {
     .slider {
-        img {
-            padding-right: 20px;
+        div:not(:last-child) {
+           img {
+               padding-right: 29px;
+           } 
         }
-
+    
         .slick-slide {
             width: 338px;
             height: 338px;
