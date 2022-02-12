@@ -28,6 +28,7 @@ function buildSass(){
         ])
     )
     .pipe(sourcemap.write())
+    .pipe(dest(`${SRC_PATH}/css`))
     .pipe(dest(`${DIST_PATH}/css`))
     .pipe(browserSync.stream())
 }
