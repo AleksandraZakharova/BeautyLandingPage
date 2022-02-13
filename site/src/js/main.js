@@ -54,7 +54,7 @@ async function initMasters(){
         }             
     });
 
-    Utils.AddItemsToSelect('master', items);
+    Utils.AddItemsToSelect('masterId', items);
 }
 
 async function initServices(){
@@ -67,22 +67,30 @@ async function initServices(){
         }             
     });
 
-    Utils.AddItemsToSelect('service', items);
+    Utils.AddItemsToSelect('serviceId', items);
 }
 
 function bindEvents(){
         document
-        .querySelector('.record-form')
+        .querySelector('.dialog__form')
         .addEventListener('submit', event => {
             event.preventDefault();
 
-            var formData = Array
+            let data = {};
+            let formData = Array
                 .from(event.target.elements)
                 .filter(element => element.name)
                 .forEach(element => {
                     const {value, name, type } = element;
-                    console.log(name, value);
-            });         
+                    data[name] = value;
+            });       
+            
+            ApiService.createOrder(data).then( response => {
+                debugger;
+                console.log(response);
+            }).catch(function(e) {
+                console.log(e); 
+            })
     })
 
     $('.hamburger').click(() => {

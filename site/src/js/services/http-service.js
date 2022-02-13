@@ -10,7 +10,7 @@ export class HttpService {
     }
 
     async post(path, data) {
-        const response = await fetch(`${baseApi}/api/${path}`, {
+        const response = await fetch(`${this.baseApi}/api/${path}`, {
             method: 'POST',
             body: JSON.stringify(data),
             headers : {
