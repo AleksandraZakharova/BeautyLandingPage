@@ -9,7 +9,19 @@ $(document).ready(function(){
         nextArrow: '.btn-next',
         slidesToShow: 4,
         infinite: true,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        responsive: [
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
     });
     
     /* Open */
@@ -20,10 +32,6 @@ $(document).ready(function(){
     /* Close*/
     function closeNav() {
         document.getElementById("hamburger-nav").style.height = "0%";
-    }
-
-    function submitForm() {
-        
     }
 
     function init() {
