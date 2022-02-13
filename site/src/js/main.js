@@ -25,6 +25,16 @@ async function initMasters(){
 }
 
 async function initServices(){
+    const services = await ApiService.getServices();
+
+    const items = services.map(element => {
+        return {
+            value : element.id,
+            text : `${element.name} (${element.description})`
+        }             
+    });
+
+    Utils.AddItemsToSelect('service', items);
 }
 
 async function init() {
@@ -80,4 +90,5 @@ async function init() {
     initMask();
 
     await initMasters();
+    await initServices();
 }
