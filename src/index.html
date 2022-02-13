@@ -143,7 +143,7 @@
                                     <p class="item__content">
                                         Аппаратный, комбинированный или классический.
                                     </p>
-                                    <button class="item__button btn">Записаться</button>
+                                    <button data-fancybox="dialog" data-src="#dialog-record-creation" class="item__button btn">Записаться</button>
                                 </div>
 
                                 <div class="cards__item item">
@@ -154,7 +154,7 @@
                                         использование базы и топа. Каждый слой <br>
                                         полимеризуется в LED-лампе.
                                     </p>
-                                    <button class="item__button btn">Записаться</button>
+                                    <button data-fancybox="dialog" data-src="#dialog-record-creation" class="item__button btn">Записаться</button>
                                 </div>
 
                                 <div class="cards__item item">
@@ -163,7 +163,7 @@
                                     <p class="item__content">
                                         Выполняется в одноразовых перчатках наполненных увлажняющим лосьоном.
                                     </p>
-                                    <button class="item__button btn">Записаться</button>
+                                    <button data-fancybox="dialog" data-src="#dialog-record-creation" class="item__button btn">Записаться</button>
                                 </div>
 
                                 <div class="cards__item item">
@@ -172,7 +172,7 @@
                                     <p class="item__content">
                                         Аппаратный, комбинированный или классический.
                                     </p>
-                                    <button class="item__button btn">Записаться</button>
+                                    <button data-fancybox="dialog" data-src="#dialog-record-creation" class="item__button btn">Записаться</button>
                                 </div>
 
                                 <div class="cards__item item">
@@ -181,7 +181,7 @@
                                     <p class="item__content">
                                         Благодаря этой процедуре увлажнение кожи увеличивается на 80%, также выводит токсины и укрепляет суставы.
                                     </p>
-                                    <button class="item__button btn">Записаться</button>
+                                    <button data-fancybox="dialog" data-src="#dialog-record-creation" class="item__button btn">Записаться</button>
                                 </div>
                             </div>
                         </div>
@@ -387,6 +387,16 @@
                                 </form>                             
                             
                         </div>
+                                
+                        <!-- Dialog Contents -->
+                    <div class="dialog" id="dialog-record-creation">
+                        <form class="dialog__form form record-form">
+                            <h2 class="form__title">Запись</h2>
+                            <input name="name" placeholder="Ваше имя">
+                            <input name="phone" placeholder="+7 (___) ___-__-__">
+                            <button class="btn">Записаться</button>
+                        </form>   
+                    </div>
                     </section>
                 </main>
                 <footer class="footer">
@@ -406,16 +416,7 @@
                     </div>
                 </footer>
         </div>  
-        
-        <!-- Dialog Contents -->
-    <div class="dialog" id="dialog-record-creation">
-        <form class="dialog__form form">
-            <h2 class="form__title">Запись</h2>
-            <input name="name" placeholder="Ваше имя">
-            <input name="phone" placeholder="+7 (___) ___-__-__">
-            <button class="btn">Записаться</button>
-        </form>   
-    </div>
+
     </body>  
 
     <script src="./js/main.min.js"></script>

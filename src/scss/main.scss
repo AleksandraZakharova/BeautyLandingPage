@@ -611,6 +611,21 @@
     }
 }
 
+.record-form {
+    background-color: $form-background;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 35px;
+    width: 445px;
+    min-height: 406px;
+    margin: 40px 0;
+
+    input {
+        margin-bottom: 20px;
+    }
+}
+
 .contacts-footer {
     background-color: $light-grey-color;
 
@@ -659,21 +674,6 @@
         }
     }
 
-    .record-form {
-        background-color: $form-background;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        padding: 40px 35px;
-        width: 445px;
-        min-height: 406px;
-        margin: 40px 0;
-
-        input {
-            margin-bottom: 20px;
-        }
-    }
-
     .form {
         &__title {
             font-weight: 600;
@@ -697,22 +697,6 @@
             a {
                 text-decoration: underline;
             }
-        }
-
-        input {
-            border: 1px solid $input-border-color;
-            box-sizing: border-box;
-            border-radius: 4px;
-            min-height: 44px;
-
-            &::placeholder {
-                font-size: 14px;
-                line-height: 14px;
-                color:$placeholder-color;
-                padding-top: 15px;
-                padding-bottom: 15px;
-                padding-left: 15px;
-              }
         }
 
         button {
@@ -772,6 +756,15 @@
 .dialog {
     display: none;
     max-width:500px;
+    padding: 0;
+
+    form {
+        margin: 0;
+    }
+
+    button {
+        min-height: 44px;
+    }
 }
 
 /* The Overlay (background) */

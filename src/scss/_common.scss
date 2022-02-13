@@ -41,3 +41,19 @@ h1 {
 .container {
     padding: 0;
 }
+
+input {
+    border: 1px solid $input-border-color;
+    box-sizing: border-box;
+    border-radius: 4px;
+    min-height: 44px;
+
+    &::placeholder {
+        font-size: 14px;
+        line-height: 14px;
+        color:$placeholder-color;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+      }
+}
