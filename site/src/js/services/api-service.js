@@ -3,7 +3,6 @@ import { API_PATH } from '../constants'
 
 class ApiService extends HttpService {
     constructor(){
-        debugger;
         super(API_PATH);
     }
 

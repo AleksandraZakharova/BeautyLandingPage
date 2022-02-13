@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import {openDialogButton, validateConfig, phoneMask} from './constants'
 import ApiService from './services/api-service';
+import Utils from './utils';
 
 $(document).ready(init());
 
@@ -12,7 +13,15 @@ function initMask(){
 
 async function initMasters(){
     const masters = await ApiService.getMasters();
-    console.log(masters);
+
+    const items = masters.map(element => {
+        return {
+            value : element.id,
+            text : `${element.firstName} ${element.patronymic} ${element.surName}`
+        }             
+    });
+
+    Utils.AddItemsToSelect('master', items);
 }
 
 async function initServices(){
