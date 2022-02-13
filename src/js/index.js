@@ -2,6 +2,8 @@ import $ from 'jquery';
 import 'slick-carousel';
 import { Fancybox } from "@fancyapps/ui";
 
+const $openDialogButton = $('#open-dialog-btn');
+
 $(document).ready(function(){
 
     $('.hamburger').click(() => {
@@ -27,6 +29,13 @@ $(document).ready(function(){
             }
           }
         ]
+    });
+
+    $('.cards button')
+        .add('.card__img-wrap')
+        .add('#record-online-btn')
+        .on('click', () => {
+        $openDialogButton.click();
     });
 
     init();
