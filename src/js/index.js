@@ -4,7 +4,7 @@ $(document).ready(function(){
         document.getElementById("hamburger-nav").style.height = "100%";
     })
 
-    $('#hamburger-nav a').on('click', function(){
+    $('#hamburger-nav a').click(() => {
         document.getElementById("hamburger-nav").style.height = "0%";
     })
 
@@ -25,22 +25,22 @@ $(document).ready(function(){
         ]
     });
 
-    function init() {
-        document
-            .querySelector('.record-form')
-            .addEventListener('submit', event => {
-                event.preventDefault();
-
-                var formData = Array
-                    .from(event.target.elements)
-                    .filter(element => element.name)
-                    .forEach(element => {
-                        const {value, name, type } = element;
-
-                        console.log(name, value);
-                });         
-        })
-    }
-
-    document.addEventListener('DOMContentLoaded', init)
+    init();
 });
+
+function init() {
+    document
+        .querySelector('.record-form')
+        .addEventListener('submit', event => {
+            event.preventDefault();
+
+            var formData = Array
+                .from(event.target.elements)
+                .filter(element => element.name)
+                .forEach(element => {
+                    const {value, name, type } = element;
+
+                    console.log(name, value);
+            });         
+    })
+}
