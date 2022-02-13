@@ -1,10 +1,13 @@
 export class HttpService {
+
     constructor(baseApiPath){
         this.baseApi = baseApiPath;
     }
 
-    async get(path){
-        const response = await fetch(`${baseApi}/api/${path}`);
+    async get(path) 
+    {
+        debugger;
+        const response = await fetch(`${this.baseApi}/api/${path}`);
         return response.json();
     }
 

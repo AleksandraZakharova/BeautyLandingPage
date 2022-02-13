@@ -3,6 +3,7 @@ import { API_PATH } from '../constants'
 
 class ApiService extends HttpService {
     constructor(){
+        debugger;
         super(API_PATH);
     }
 
@@ -11,8 +12,7 @@ class ApiService extends HttpService {
     }
 
     getMasters() {
-        const response = await fetch('staff');
-        return response.json();
+        return this.get('staff');
     }
 
     createOrder(orderData) {

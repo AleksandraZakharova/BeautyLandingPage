@@ -1,31 +1,37 @@
 import $ from 'jquery';
+import {openDialogButton, validateConfig, phoneMask} from './constants'
+import ApiService from './services/api-service';
 
-const openDialogButton = '#open-dialog-btn';
-const validateConfig = {
-    rules: {
-        name: {
-          required: true
-        },
-        phone : {
-            required: true
-        }
-      },
-      messages: {
-        name: {
-          required: "Заполните имя"
-        },
-        phone: {
-            required: "Заполните телефон"
-        }
-      }
-  };
+$(document).ready(init());
 
-const phoneMask = "+7 (999) 999-99-99";
-
-$(document).ready(function(){
+function initMask(){
     const selector = document.getElementsByName("phone")
     const im = new Inputmask(phoneMask);
     im.mask(selector);
+}
+
+async function initMasters(){
+    const masters = await ApiService.getMasters();
+    console.log(masters);
+}
+
+async function initServices(){
+}
+
+async function init() {
+    document
+        .querySelector('.record-form')
+        .addEventListener('submit', event => {
+            event.preventDefault();
+
+            var formData = Array
+                .from(event.target.elements)
+                .filter(element => element.name)
+                .forEach(element => {
+                    const {value, name, type } = element;
+                    console.log(name, value);
+            });         
+    })
 
     $(".dialog__form").validate(validateConfig);
     $(".contacts-footer .record-form").validate(validateConfig);
@@ -62,21 +68,7 @@ $(document).ready(function(){
         $(openDialogButton).click();
     });
 
-    init();
-});
+    initMask();
 
-function init() {
-    document
-        .querySelector('.record-form')
-        .addEventListener('submit', event => {
-            event.preventDefault();
-
-            var formData = Array
-                .from(event.target.elements)
-                .filter(element => element.name)
-                .forEach(element => {
-                    const {value, name, type } = element;
-                    console.log(name, value);
-            });         
-    })
+    await initMasters();
 }
