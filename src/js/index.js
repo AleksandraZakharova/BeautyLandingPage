@@ -1,7 +1,11 @@
 $(document).ready(function(){
 
+    $('.hamburger').click(() => {
+        document.getElementById("hamburger-nav").style.height = "100%";
+    })
+
     $('#hamburger-nav a').on('click', function(){
-        closeNav();
+        document.getElementById("hamburger-nav").style.height = "0%";
     })
 
     $('.slider').slick({
@@ -18,21 +22,8 @@ $(document).ready(function(){
               slidesToScroll: 1
             }
           }
-          // You can unslick at a given breakpoint now by adding:
-          // settings: "unslick"
-          // instead of a settings object
         ]
     });
-    
-    /* Open */
-    function openNav() {
-        document.getElementById("hamburger-nav").style.height = "100%";
-    }
-
-    /* Close*/
-    function closeNav() {
-        document.getElementById("hamburger-nav").style.height = "0%";
-    }
 
     function init() {
         document
