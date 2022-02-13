@@ -57,3 +57,12 @@ input, select {
         padding-left: 15px;
       }
 }
+
+input.error {
+    border: 1px solid $error-color;
+}
+
+label.error {
+    color: $error-color;
+    margin-top: -10px;
+}
