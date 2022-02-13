@@ -769,6 +769,10 @@
     }    
 }
 
+.dialog {
+    display: none;
+    max-width:500px;
+}
 
 /* The Overlay (background) */
 .overlay {

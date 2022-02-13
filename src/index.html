@@ -55,7 +55,7 @@
                             <div class="hero__content content">
                                 <h1 class="content__title">Создай свой образ вместе с нами</h1>
                                 <p class="content__subtitle">Идеальный образ за 60 минут</p>
-                                <button class="content__btn btn">Записаться онлайн</button>
+                                <button data-fancybox="dialog" data-src="#dialog-record-creation" class="content__btn btn">Записаться онлайн</button>
                             </div>
                             <div class="hero__img">
                                 <img src="./images/makiiazh-devushka-litso-ruka-pricheska-volosy-golubye-glaza 1.png">          
@@ -405,7 +405,17 @@
                             </nav>
                     </div>
                 </footer>
-        </div>      
+        </div>  
+        
+        <!-- Dialog Contents -->
+    <div class="dialog" id="dialog-record-creation">
+        <form class="dialog__form form">
+            <h2 class="form__title">Запись</h2>
+            <input name="name" placeholder="Ваше имя">
+            <input name="phone" placeholder="+7 (___) ___-__-__">
+            <button class="btn">Записаться</button>
+        </form>   
+    </div>
     </body>  
 
     <script src="./js/main.min.js"></script>
