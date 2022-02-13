@@ -39,9 +39,9 @@ function buildSass(){
 function buildJs(){
     return src(PATHS.js)
         .pipe(webpackStream(require('./webpack.config.js')))
+        .pipe(rename('main.min.js'))
         .pipe(dest(`${SRC_PATH}/js`))
         .pipe(dest(`${DIST_PATH}/js`))
-        .pipe(rename('main.min.js'))
         .pipe(browserSync.stream()) //уведомление браузера о произошедшем изменении
 }
 
