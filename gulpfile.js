@@ -25,7 +25,7 @@ function buildSass(){
     .pipe(sass({includePaths: ['./node_modules']}).on('error', sass.logError))
     .pipe(
         postcss([
-            autoprefixer(),
+            autoprefixer({ grid: true }),
             cssnano()
         ])
     )
