@@ -5,6 +5,39 @@ import Utils from './utils';
 
 $(document).ready(init());
 
+async function init() {
+    formValidationInit();
+    initSlider();
+    bindEvents();
+    initMask();
+    await initMasters();
+    await initServices();
+}
+
+function formValidationInit(){
+    $(".dialog__form").validate(validateConfig);
+    $(".contacts-footer .record-form").validate(validateConfig);
+}
+
+function initSlider(){
+    $('.slider').slick({
+        prevArrow: '.btn-prev',
+        nextArrow: '.btn-next',
+        slidesToShow: 4,
+        infinite: true,
+        adaptiveHeight: true,
+        responsive: [
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+    });
+}
+
 function initMask(){
     const selector = document.getElementsByName("phone")
     const im = new Inputmask(phoneMask);
@@ -37,8 +70,8 @@ async function initServices(){
     Utils.AddItemsToSelect('service', items);
 }
 
-async function init() {
-    document
+function bindEvents(){
+        document
         .querySelector('.record-form')
         .addEventListener('submit', event => {
             event.preventDefault();
@@ -52,9 +85,6 @@ async function init() {
             });         
     })
 
-    $(".dialog__form").validate(validateConfig);
-    $(".contacts-footer .record-form").validate(validateConfig);
-
     $('.hamburger').click(() => {
         document.getElementById("hamburger-nav").style.height = "100%";
     })
@@ -63,32 +93,12 @@ async function init() {
         document.getElementById("hamburger-nav").style.height = "0%";
     })
 
-    $('.slider').slick({
-        prevArrow: '.btn-prev',
-        nextArrow: '.btn-next',
-        slidesToShow: 4,
-        infinite: true,
-        adaptiveHeight: true,
-        responsive: [
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-    });
-
     $('.cards button')
         .add('.card__img-wrap')
         .add('#record-online-btn')
         .on('click', () => {
         $(openDialogButton).click();
     });
-
-    initMask();
-
-    await initMasters();
-    await initServices();
 }
+
+
