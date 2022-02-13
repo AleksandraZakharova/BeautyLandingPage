@@ -1,11 +1,6 @@
 import $ from 'jquery';
-import 'slick-carousel';
-import { Fancybox } from "@fancyapps/ui";
-import Inputmask from 'inputmask';
-import validate from 'jquery-validation'
-import './main'
 
-const $openDialogButton = $('#open-dialog-btn');
+const openDialogButton = '#open-dialog-btn';
 const validateConfig = {
     rules: {
         name: {
@@ -64,7 +59,7 @@ $(document).ready(function(){
         .add('.card__img-wrap')
         .add('#record-online-btn')
         .on('click', () => {
-        $openDialogButton.click();
+        $(openDialogButton).click();
     });
 
     init();
@@ -81,7 +76,6 @@ function init() {
                 .filter(element => element.name)
                 .forEach(element => {
                     const {value, name, type } = element;
-
                     console.log(name, value);
             });         
     })
