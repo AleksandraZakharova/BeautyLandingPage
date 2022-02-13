@@ -4,8 +4,8 @@
   "description": "Author: Aleksandra Zaharova",
   "main": "index.js",
   "scripts": {
-    "build": "gulp build",
-    "start": "gulp",
+    "build": "cross-env NODE_ENV=development gulp build",
+    "start": "cross-env NODE_ENV=development gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,16 +19,24 @@
   },
   "homepage": "https://github.com/AleksandraZakharova/BeautyLandingPage#readme",
   "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
     "autoprefixer": "^10.4.0",
+    "babel-loader": "^8.2.3",
     "browser-sync": "^2.27.7",
+    "cross-env": "^7.0.3",
     "cssnano": "^5.0.10",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "postcss": "^8.3.11",
-    "sass": "^1.43.3"
+    "sass": "^1.43.3",
+    "webpack": "^5.68.0",
+    "webpack-stream": "^7.0.0"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",

@@ -6,6 +6,8 @@ const sourcemap = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const webpackStream = require('webpack-stream');
+const rename = require('gulp-rename');
 
 const SRC_PATH = 'src';
 const DIST_PATH = 'dist';
@@ -30,13 +32,17 @@ function buildSass(){
     .pipe(sourcemap.write())
     .pipe(dest(`${SRC_PATH}/css`))
     .pipe(dest(`${DIST_PATH}/css`))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream()) //уведомление браузера о произошедшем изменении
 }
 
+//Таск транспиляции js файлов
 function buildJs(){
     return src(PATHS.js)
+        .pipe(webpackStream(require('./webpack.config.js')))
+        .pipe(dest(`${SRC_PATH}/js`))
         .pipe(dest(`${DIST_PATH}/js`))
-        .pipe(browserSync.stream());
+        .pipe(rename('main.min.js'))
+        .pipe(browserSync.stream()) //уведомление браузера о произошедшем изменении
 }
 
 function buildHtml() {
@@ -65,5 +71,5 @@ function createDevServer() {
     })
 }
 
-exports.build = series(cleanDist, buildSass, buildHtml, buildJs, copy);
+exports.build = series(cleanDist, buildSass, buildJs, buildHtml, copy);
 exports.default = series([buildSass, buildJs], parallel(createDevServer, serve));
