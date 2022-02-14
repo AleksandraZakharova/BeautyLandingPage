@@ -72,17 +72,17 @@ async function initServices(){
     Utils.AddItemsToSelect('serviceId', items);
 }
 
-function showAlert(){
-    $("#order-success").show();
+function showFullOrderSuccessAlert(){
+    $("#full-order-success").show();
 }
 
-function showSuccessDialog(){
-    Fancybox.show([{ src: "#order-success-dialog", type: "inline" }]);
+function showShortOrderSuccessAlert(){
+    $("#short-order-success").show();
 }
 
 function bindEvents(){
-    document.getElementById('full-record-form').addEventListener('submit', e => { OrderForm.submitFormEvent(e, showAlert)})
-    document.getElementById('short-record-form').addEventListener('submit', e => {OrderForm.submitFormEvent(e, showSuccessDialog)})
+    document.getElementById('full-record-form').addEventListener('submit', e => { OrderForm.submitFormEvent(e, showFullOrderSuccessAlert)})
+    document.getElementById('short-record-form').addEventListener('submit', e => {OrderForm.submitFormEvent(e, showShortOrderSuccessAlert)})
 
     $('.carousel__button').click(() => {
         $("#order-success").hide();
