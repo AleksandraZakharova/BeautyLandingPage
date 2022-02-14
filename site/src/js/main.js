@@ -1,8 +1,8 @@
 import $ from 'jquery';
-import {openDialogButton, validateConfig, phoneMask} from './constants'
+import {openDialogButton, phoneMask, validateConfig} from './constants'
 import ApiService from './services/api-service';
 import Utils from './utils';
-import OrderForm from './forms/order-form';
+import { OrderForm } from './forms/order-form';
 
 $(document).ready(init());
 
@@ -16,8 +16,18 @@ async function init() {
 }
 
 function formValidationInit(){
-    $(".dialog__form").validate(validateConfig);
-    $(".contacts-footer .record-form").validate(validateConfig);
+    const fullFormOptions = {
+        form: $('#full-record-form'),
+        successCallBack: showFullOrderSuccessAlert
+    };
+
+    const shortFormOptions = {
+        form: $('#short-record-form'),
+        successCallBack: showShortOrderSuccessAlert
+    };
+
+    new OrderForm(fullFormOptions);
+    new OrderForm(shortFormOptions);
 }
 
 function initSlider(){
@@ -81,9 +91,6 @@ function showShortOrderSuccessAlert(){
 }
 
 function bindEvents(){
-    document.getElementById('full-record-form').addEventListener('submit', e => { OrderForm.submitFormEvent(e, showFullOrderSuccessAlert)})
-    document.getElementById('short-record-form').addEventListener('submit', e => {OrderForm.submitFormEvent(e, showShortOrderSuccessAlert)})
-
     $('.carousel__button').click(() => {
         $("#order-success").hide();
     })

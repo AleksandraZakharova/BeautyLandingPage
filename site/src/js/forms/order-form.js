@@ -1,11 +1,45 @@
 import ApiService from "../services/api-service";
+import $ from 'jquery';
 
-class OrderForm {
+const validateRules = {
+    name: {
+      required: true
+    },
+    phone : {
+        required: true
+    }
+  };
 
-    getFormData(event) {
+const validateMessages = {
+    name: {
+      required: "Заполните имя"
+    },
+    phone: {
+        required: "Заполните телефон"
+    }
+}
+
+export class OrderForm {
+    constructor(options){
+        this.form = options.form;
+        this.successCallBack = options.successCallBack;
+        this.init();
+    }
+
+    init(){
+        this.form.validate({
+            rules: validateRules,
+            messages: validateMessages,
+            submitHandler: (form) => {
+                this.submitFormEvent(form)
+            }
+        });
+    }
+
+    getFormData(form) {
         let data = {};
         let formData = Array
-            .from(event.target.elements)
+            .from(form)
             .filter(element => element.name)
             .forEach(element => {
                 const {value, name, type } = element;
@@ -15,18 +49,16 @@ class OrderForm {
         return data;
     }
     
-    submitFormEvent(event, successCallback){
-        event.preventDefault();
-        let data = this.getFormData(event);
+    submitFormEvent(form){
+        debugger;
+        let data = this.getFormData(form);
         
         ApiService.createOrder(data)
             .then(() => {
-                successCallback();
+                this.successCallBack();
             })
             .catch((e) => {
                 console.log(e); 
             })
     }
 }
-
-export default new OrderForm();
