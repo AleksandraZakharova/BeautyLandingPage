@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <head>
+        <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <div class="wrapper">
+    
+                <header class="header">
+                    <div class="container">
+                        <div class="header__top top">
+                            <div class="top__title">
+                                <span class="hamburger" onclick="openNav()">
+                                    <img src="./images/hamburger.png">
+                                </span>
+                                <div id="hamburger-nav" class="overlay">
+  
+                                    <!-- Button to close the overlay navigation -->
+                                    <a href="#" class="closebtn">&times;</a>
+                                    
+                                    <!-- Overlay content -->
+                                    <div class="overlay-content">
+                                      <a href="#services-price-section">Услуги и цены</a>
+                                      <a href="#masters-section">Мастера</a>
+                                      <a href="#our-works-section">Наши работы</a>
+                                      <a href="#about-section">О нас</a>
+                                      <a href="#contacts-section">Контакты</a>
+                                    </div>
+                                    
+                                  </div>
+                                  
+                                <h1>Мир красоты</h1>
+                            </div>                           
+                            <nav class="navigation">
+                                <ul>
+                                    <li><a href="#services-price-section">Услуги и цены</a></li>
+                                    <li><a class="active" href="#masters-section">Мастера</a></li>
+                                    <li><a href="#our-works-section">Наши работы</a></li>
+                                    <li><a href="#about-section">О нас</a></li>
+                                    <li><a href="#contacts-section">Контакты</a></li>
+                                </ul>
+                            </nav>
+                            <div class="contacts">
+                                <span class="contacts__phone">8 (499) 686-17-62</span> 
+                                <span class="contacts__time-table">с 10.00 до 19.00 без выходных</span>  
+                            </div>                                   
+                        </div>  
+
+                        <div class="header__hero hero">
+                            <div class="hero__content content">
+                                <h1 class="content__title">Создай свой образ вместе с нами</h1>
+                                <p class="content__subtitle">Идеальный образ за 60 минут</p>
+                                <button id="record-online-btn" class="content__btn btn">Записаться онлайн</button>
+                            </div>
+                            <div class="hero__img">
+                                <img src="./images/makiiazh-devushka-litso-ruka-pricheska-volosy-golubye-glaza 1.png">          
+                            </div>
+                        </div>
+                        <div class="hero__socials socials">                           
+                            <a href="#" target="_blank"><img src="./images/vk.svg"></a>
+                            <a href="#" target="_blank"><img src="./images/instagram.svg"></a>
+                            <a href="#" target="_blank"><img src="./images/youtube.svg"></a>
+                        </div>
+                    </div>
+                </header>
+      
+       
+                <main class="main">
+                  
+                        <section class="about section" id="about-section">
+                            <div class="container">
+                                <h1 class="section__title">О салоне</h1>
+                                <div class="about__hero hero">
+                                    <div class="content">
+                                        <p class="content__subtitle">Мир красоты - это уютный салон в самом центре города. 
+                                            Здесь работают профессиональные визажисты, стилисты и мастера татуажа
+                                        </p>
+                                        <p class="content__article">
+                                            Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония обретает форму,
+    а внешность становится отражением внутреннего мира. Новая жизнь начинается с небольших изменений. Мы помогаем нашим клиентам воплотить их индивидуальность во внешнем облике. Мы создаем стиль – вместе с Вами и для Вас.
+                                        </p>
+                                        <span class="content__link">Развернуть</span>
+                                    </div>
+                                    <div class="video-box" style="background-image: url('./images/10947227_1920 1.png');">
+                                        <div class="video-box__action">Короткое видео о нас</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <section class="benefits section">
+                                <div class="container">
+                                    <div class="benefit item">
+                                        <div class="benefit__img">
+                                            <img src="./images/benefit-1.png">
+                                        </div>
+                                        <h2 class="item__title">Удобные кабинеты</h2>
+                                        <p class="item__content">Комфорт и стиль - принцип создания <br> 
+                                            кабинетов салона красоты. Только <br>
+                                            эстетика и удобство для Вас
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="benefit item">
+                                        <div class="benefit__img">
+                                            <img src="./images/benefit-2.png">
+                                        </div>
+                                        <h2 class="item__title">Качественная косметика</h2>
+                                        <p class="item__content">
+                                            Используем профессиональные <br>
+                                            материалы высшего качества<br> 
+                                            лучших брендов
+                                        </p>
+                                    </div>
+
+                                    <div class="benefit item">
+                                        <div class="benefit__img">
+                                            <img src="./images/benefit-3.png">
+                                        </div>
+                                        <h2 class="item__title">Опытные мастера</h2>
+                                        <p class="item__content">
+                                            Работают только опытные мастера <br>
+                                            с чувством стиля. Смотрите наших <br>
+                                            специалистов в разделе Мастера
+                                        </p>
+                                    </div>
+                                </div>
+                    </section>
+
+                    <section class="popular-services section">
+                        <div class="container">
+                            <h1 class="section__title">Популярные услуги</h1>
+                            <div class="cards">
+                                <div class="cards__item item">
+                                    <img src="./images/popular-service.png">
+                                    <h2 class="item__title">Маникюр</h2>
+                                    <p class="item__content">
+                                        Аппаратный, комбинированный или классический.
+                                    </p>
+                                    <button class="item__button btn">Записаться</button>
+                                </div>
+
+                                <div class="cards__item item">
+                                    <img src="./images/popular-service.png">
+                                    <h2 class="item__title">Покрытие гель-лак</h2>
+                                    <p class="item__content">
+                                        Гель-лак наносится в несколько слоев с <br>
+                                        использование базы и топа. Каждый слой <br>
+                                        полимеризуется в LED-лампе.
+                                    </p>
+                                    <button class="item__button btn">Записаться</button>
+                                </div>
+
+                                <div class="cards__item item">
+                                    <img src="./images/popular-service.png">
+                                    <h2 class="item__title">Бразильский маникюр</h2>
+                                    <p class="item__content">
+                                        Выполняется в одноразовых перчатках наполненных увлажняющим лосьоном.
+                                    </p>
+                                    <button class="item__button btn">Записаться</button>
+                                </div>
+
+                                <div class="cards__item item">
+                                    <img src="./images/popular-service.png">
+                                    <h2 class="item__title">Педикюр</h2>
+                                    <p class="item__content">
+                                        Аппаратный, комбинированный или классический.
+                                    </p>
+                                    <button class="item__button btn">Записаться</button>
+                                </div>
+
+                                <div class="cards__item item">
+                                    <img src="./images/popular-service.png">
+                                    <h2 class="item__title">Парафинотерапия</h2>
+                                    <p class="item__content">
+                                        Благодаря этой процедуре увлажнение кожи увеличивается на 80%, также выводит токсины и укрепляет суставы.
+                                    </p>
+                                    <button class="item__button btn">Записаться</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>   
+                    
+                    <section class="services-price section" id="services-price-section">
+                        <div class="container">
+                            <h1 class="section__title">Услуги и цены</h1>
+
+                            <nav class="navigation">
+                                <ul>
+                                    <li class="first-li"><a class="active" href="#">Стрижка и укладка</a></li>
+                                    <li><a href="#">Косметология</a></li>
+                                    <li><a href="#">Маникюр и педикюр</a></li>
+                                    <li><a class="active" href="#">Макияж</a></li>
+                                    <li><a href="#">Брови и ресницы</a></li>
+                                    <li><a href="#">Массаж</a></li>
+                                </ul>
+                            </nav>
+
+                            <ul class="prices">
+                                <li class="prices__item item">
+                                    <div class="item__description">
+                                        <h2>Женская стрижка</h2>
+                                        <p>Короткие волосы</p>
+                                    </div>
+                                    <span class="item__price">1200 ₽</span>
+                                </li>
+
+                                <li class="prices__item item">
+                                    <div class="item__description">
+                                        <h2>Мужская стрижка</h2>
+                                        <p>Короткие волосы</p>
+                                    </div>
+                                    <span class="item__price">1200 ₽</span>
+                                </li>
+
+                                <li class="prices__item item">
+                                    <div class="item__description">
+                                        <h2>Детский Стиль</h2>
+                                        <p>Короткие волосы</p>
+                                    </div>
+                                    <span class="item__price">1200 ₽</span>
+                                </li>
+
+                                <li class="prices__item item">
+                                    <div class="item__description">
+                                        <h2>Креативный Стиль</h2>
+                                        <p>Короткие волосы</p>
+                                    </div>
+                                    <span class="item__price">1200 ₽</span>
+                                </li>
+
+                                <li class="prices__item item">
+                                    <div class="item__description">
+                                        <h2>Стрижка бороды и усов</h2>
+                                        <p>Короткие волосы</p>
+                                    </div>
+                                    <span class="item__price">1200 ₽</span>
+                                </li>
+
+                                <li class="prices__item item">
+                                    <div class="item__description">
+                                        <h2>Экспресс укладка</h2>
+                                        <p>Короткие волосы</p>
+                                    </div>
+                                    <span class="item__price">1200 ₽</span>
+                                </li>
+
+                                <li class="prices__item item">
+                                    <div class="item__description">
+                                        <h2>Укладка дневная</h2>
+                                        <p>Короткие волосы</p>
+                                    </div>
+                                    <span class="item__price">1200 ₽</span>
+                                </li>
+
+                                <li class="prices__item item">
+                                    <div class="item__description">
+                                        <h2>Прическа вечерняя (свадебная)</h2>
+                                        <p>Короткие волосы</p>
+                                    </div>
+                                    <span class="item__price">1200 ₽</span>
+                                </li>
+                            </ul>
+                        </div>                       
+                    </section>
+
+                    <section class="section masters" id="masters-section">
+                        <div class="container">
+                            <h1 class="section__title">Мастера</h1>
+                            <p class="masters__subtitle"> 
+                                Дружная команда настоящих профессионалов
+                            </p>
+
+                            <div class="masters__cards">
+                                <div class="card">
+                                    <div class="card__img-wrap" style="background-image: url('./images/Краснова Ирина.png');"></div>
+                                    <h2 class="card__header">Краснова Ирина</h2>
+                                    <p class="card__position">Мастер ногтевого сервиса</p>
+                                    <p class="card__experience">опыт работы 5 лет</p>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card__img-wrap" style="background-image: url('./images/Калилова Жанна.png');"></div>
+                                    <h2 class="card__header">Калилова Жанна</h2>
+                                    <p class="card__position">Визажист-стилист</p>
+                                    <p class="card__experience">опыт работы 5 лет</p>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card__img-wrap" style="background-image: url('./images/Киселева Алина.png');"></div>
+                                    <h2 class="card__header">Киселева Алина</h2>
+                                    <p class="card__position">Парикмахер</p>
+                                    <p class="card__experience">опыт работы 5 лет</p>
+                                </div>
+
+                                <div class="card">                                  
+                                    <div class="card__img-wrap" style="background-image: url('./images/Иванова Елена.png');"></div>
+                                    <h2 class="card__header">Иванова Елена</h2>
+                                    <p class="card__position">Мастер ногтевого сервиса</p>
+                                    <p class="card__experience">опыт работы 5 лет</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                  <section class="section our-works" id="our-works-section">                  
+                        <div class="container">
+                            <h1 class="section__title">Наши работы</h1>
+                            <div class="slider-btn">
+                                <button class="btn btn-prev"></button>
+                                <button class="btn btn-next"></button>
+                            </div>
+                        </div>
+                        <div class="works slider"> 
+                                <div>
+                                    <a data-fancybox="slider" href='./images/work1.png'><img class="works__img" src='./images/work1.png'></a> 
+                                </div>
+                                <div>
+                                    <a data-fancybox="slider" href='./images/work2.png'><img class="works__img" src='./images/work2.png'></a> 
+                                </div>
+                                <div>
+                                    <a data-fancybox="slider" href='./images/work3.png'><img class="works__img" src='./images/work3.png'></a> 
+                                </div>
+                                <div>
+                                    <a data-fancybox="slider" href='./images/work4.png'><img class="works__img" src='./images/work4.png'></a> 
+                                </div>
+                                <div>
+                                    <a data-fancybox="slider" href='./images/work2.png'><img class="works__img" src='./images/work2.png'></a> 
+                                </div>
+                        </div>  
+                    </section> 
+
+                    <section class="section brands">
+                       <div class="container">
+                            <p class="brands__title">Бренды, которые мы используем в работе</p>
+                            <div class="brands-row">
+                                <div class="brand">
+                                    <img class="brand__wella" src="./images/wella.png">
+                                </div>
+                                <div class="brand">
+                                    <img class="brand__schwarzkopf" src="./images/schwarzkopf.png">
+                                </div>
+                                <div class="brand">
+                                    <img class="brand__tigi" src="./images/tigi.png">
+                                </div>
+                                <div class="brand">
+                                    <img class="brand__londa" src="./images/londa.png">
+                                </div>
+                                <div class="brand">
+                                    <img class="brand__nioxin" src="./images/nioxin.png">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section contacts-footer" id="contacts-section">
+                        <div class="container">                        
+                                <div class="content contacts">
+                                    <h1 class="section__title">Контакты</h1>
+                                    <p class="contacts__address">Томск, проспект Ленина, дом 13</p>
+                                    <p class="contacts__phone">8 (499) 686-17-62</p>
+                                    <p class="contacts__mail">
+                                        <a class="content__link" href="mailto:insertemailhere@xyz.com">info@more-krasoty.ru</a>
+                                    </p>
+                                    <p class="contacts__social-title">Мы в социальных сетях</p>
+                                    <div class="contacts__socials socials">                           
+                                        <a href="#" target="_blank"><img src="./images/vk.svg"></a>
+                                        <a href="#" target="_blank"><img src="./images/instagram.svg"></a>
+                                        <a href="#" target="_blank"><img src="./images/youtube.svg"></a>
+                                    </div>
+                                </div>
+
+                                <form id="short-record-form" class="record-form form">
+                                    <div id="short-order-success" class="alert alert-success" role="alert">
+                                        Ваша заявка отправлена! В ближайшее время с вами свяжется менеджер.
+                                    </div>
+                                    <h2 class="form__title">Быстрая запись</h2>
+                                    <p class="form__info">Наш менеджер перезвонит в течение нескольких минут, уточнит подробности и согласует время.</p>
+                                    <input name="name" placeholder="Ваше имя">
+                                    <input name="phone" placeholder="+7 (___) ___-__-__">
+                                    <button class="btn">Записаться</button>
+                                    <p class="form__agreement">Нажимая на кнопку вы соглашаетесь с 
+                                        <a href="#" class="content__link">с обработкой персональных данных</a>
+                                    </p>
+                                </form>                             
+                            
+                        </div>
+                    </section>
+                </main>
+                <footer class="footer">
+                    <div class="container">
+                            <div class="footer__content">
+                                <span>© 2020 "Море красоты"</span>
+                                <a>Политика конфиденциальности</a>
+                            </div>
+                            <nav class="navigation">
+                                <ul>
+                                    <li><a href="#services-price-section">Услуги и цены</a></li>
+                                    <li><a href="#masters-section">Мастера</a></li>
+                                    <li><a href="#our-works-section">Наши работы</a></li>
+                                    <li><a href="#contacts-section">Контакты</a></li>
+                                </ul>
+                            </nav>
+                    </div>
+                </footer>
+        </div>  
+                    <!-- Dialog Contents -->
+                    
+                    <div class="dialog" id="dialog-record-creation">
+                        <form id="full-record-form" class="dialog__form form record-form">
+                            <div id="full-order-success" class="alert alert-success" role="alert">
+                                Ваша заявка отправлена! В ближайшее время с вами свяжется менеджер.
+                            </div>
+                            <h2 class="form__title">Запись</h2>
+                            <input name="name" placeholder="Ваше имя">
+                            <input name="phone" placeholder="+7 (___) ___-__-__">
+                            <select name="masterId">
+                                <option value="" disabled selected>Выберете мастера</option>
+                            </select>
+                            <select name="serviceId">
+                                <option value="" disabled selected>Выберете услугу</option>
+                            </select>
+                            <input name="visitDate" type="date" placeholder="дд.мм.гггг">
+                            <button class="btn">Записаться</button>
+                        </form>   
+                    </div>
+                    <button id="open-dialog-btn" data-fancybox="dialog" data-src="#dialog-record-creation"></button>
+    </body>  
+
+    <script src="./js/main.min.js"></script>
+</html>
