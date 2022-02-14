@@ -375,7 +375,7 @@
                                     </div>
                                 </div>
 
-                                <form class="record-form form">
+                                <form id="short-record-form" class="record-form form">
                                     <h2 class="form__title">Быстрая запись</h2>
                                     <p class="form__info">Наш менеджер перезвонит в течение нескольких минут, уточнит подробности и согласует время.</p>
                                     <input name="name" placeholder="Ваше имя">
@@ -407,10 +407,14 @@
                 </footer>
         </div>  
                     <!-- Dialog Contents -->
+                    <div id="order-success-dialog">
+                        Ваша заявка отправлена! В ближайшее время с вами свяжется менеджер.
+                    </div>
+                    
                     <div class="dialog" id="dialog-record-creation">
-                        <form class="dialog__form form record-form">
-                            <div class="alert alert-success" role="alert">
-                                This is a success alert—check it out!
+                        <form id="full-record-form" class="dialog__form form record-form">
+                            <div id="order-success" class="alert alert-success" role="alert">
+                                Ваша заявка отправлена! В ближайшее время с вами свяжется менеджер.
                             </div>
                             <h2 class="form__title">Запись</h2>
                             <input name="name" placeholder="Ваше имя">

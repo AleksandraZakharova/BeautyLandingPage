@@ -2,6 +2,7 @@ import $ from 'jquery';
 import {openDialogButton, validateConfig, phoneMask} from './constants'
 import ApiService from './services/api-service';
 import Utils from './utils';
+import OrderForm from './forms/order-form';
 
 $(document).ready(init());
 
@@ -45,6 +46,7 @@ function initMask(){
 }
 
 async function initMasters(){
+    debugger;
     const masters = await ApiService.getMasters();
 
     const items = masters.map(element => {
@@ -70,27 +72,20 @@ async function initServices(){
     Utils.AddItemsToSelect('serviceId', items);
 }
 
-function bindEvents(){
-        document
-        .querySelector('.dialog__form')
-        .addEventListener('submit', event => {
-            event.preventDefault();
+function showAlert(){
+    $("#order-success").show();
+}
 
-            let data = {};
-            let formData = Array
-                .from(event.target.elements)
-                .filter(element => element.name)
-                .forEach(element => {
-                    const {value, name, type } = element;
-                    data[name] = value;
-            });       
-            
-            ApiService.createOrder(data).then( response => {
-                debugger;
-                console.log(response);
-            }).catch(function(e) {
-                console.log(e); 
-            })
+function showSuccessDialog(){
+    Fancybox.show([{ src: "#order-success-dialog", type: "inline" }]);
+}
+
+function bindEvents(){
+    document.getElementById('full-record-form').addEventListener('submit', e => { OrderForm.submitFormEvent(e, showAlert)})
+    document.getElementById('short-record-form').addEventListener('submit', e => {OrderForm.submitFormEvent(e, showSuccessDialog)})
+
+    $('.carousel__button').click(() => {
+        $("#order-success").hide();
     })
 
     $('.hamburger').click(() => {
